@@ -1,0 +1,47 @@
+alice@Minh-Vu ~ % /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222
+
+
+DevTools remote debugging requires a non-default data directory. Specify this using --user-data-dir.
+Created TensorFlow Lite XNNPACK delegate for CPU.
+[10627:90289:0602/102426.184284:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[10653:90768:0602/102442.963747:VERBOSE1:chrome/updater/updater.cc:352] Version: 149.0.7814.0, opt, ARM_64, command line: /Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake-all --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[10653:90768:0602/102442.963916:VERBOSE1:chrome/updater/updater.cc:355] OS version: 15.6.0, arch: arm64, System uptime (seconds): 4894, parent pid: 10627
+[10653:90768:0602/102442.965680:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[10655:90772:0602/102442.971927:VERBOSE1:chrome/updater/updater.cc:352] Version: 149.0.7814.0, opt, ARM_64, command line: /Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=149.0.7814.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[10655:90772:0602/102442.972062:VERBOSE1:chrome/updater/updater.cc:355] OS version: 15.6.0, arch: arm64, System uptime (seconds): 4894, parent pid: 1
+[10655:90772:0602/102442.973490:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[10653:90768:0602/102442.973800:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[10653:90768:0602/102442.974272:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[10653:90768:0602/102442.974328:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[10653:90768:0602/102442.974377:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/alice/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[10653:90768:0602/102442.974549:VERBOSE1:chrome/updater/updater.cc:103] Crash reporting initialized.
+[10653:90781:0602/102442.974739:VERBOSE1:chrome/updater/app/app_wakeall.cc:58] Launching `/Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake`
+[10656:90785:0602/102442.979385:VERBOSE1:chrome/updater/updater.cc:352] Version: 149.0.7814.0, opt, ARM_64, command line: /Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[10656:90785:0602/102442.979508:VERBOSE1:chrome/updater/updater.cc:355] OS version: 15.6.0, arch: arm64, System uptime (seconds): 4894, parent pid: 10653
+[10656:90785:0602/102442.980806:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[10658:90789:0602/102442.985781:VERBOSE1:chrome/updater/updater.cc:352] Version: 149.0.7814.0, opt, ARM_64, command line: /Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --crash-handler --database=/Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/Crashpad --url=https://clients2.google.com/cr/report --annotation=prod=Update4 --annotation=ver=149.0.7814.0 --handshake-fd=6 --enable-logging --vmodule=*/components/update_client/*=2,*/chrome/enterprise_companion/*=2,*/chrome/updater/*=2
+[10658:90789:0602/102442.985895:VERBOSE1:chrome/updater/updater.cc:355] OS version: 15.6.0, arch: arm64, System uptime (seconds): 4894, parent pid: 1
+[10658:90789:0602/102442.987145:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS START event to the history log
+[10656:90785:0602/102442.987421:VERBOSE1:chrome/updater/crash_reporter.cc:124] Crash handler launched and ready.
+[10656:90785:0602/102442.987845:VERBOSE1:chrome/updater/crash_client.cc:108] Found 0 completed crash reports
+[10656:90785:0602/102442.987890:VERBOSE1:chrome/updater/crash_client.cc:132] Found 0 pending crash reports
+[10656:90785:0602/102442.987931:ERROR:third_party/crashpad/crashpad/util/file/file_io_posix.cc:145] open /Users/alice/Library/Application Support/Google/RLZ/Crashpad/settings.dat: No such file or directory (2)
+[10656:90785:0602/102442.988078:VERBOSE1:chrome/updater/updater.cc:103] Crash reporting initialized.
+[10656:90785:0602/102442.988188:VERBOSE1:chrome/updater/ipc/update_service_internal_proxy_mojo.cc:61] Run
+[10627:90289:0602/102449.973083:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+[10627:90245:0602/102451.250745:ERROR:chrome/browser/ui/startup/startup_browser_creator_impl.cc:267] No browser window found for startup.
+Trying to load the allocator multiple times. This is *not* supported.
+[10656:90785:0602/102500.334862:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[10656:90785:0602/102500.335120:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[10656:90785:0602/102500.335129:VERBOSE1:chrome/updater/updater.cc:390] UpdaterMain (--wake) returned 0.
+[10653:90781:0602/102500.596070:VERBOSE1:chrome/updater/app/app_wakeall.cc:68] `/Users/alice/Library/Application Support/Google/GoogleUpdater/149.0.7814.0/GoogleUpdater.app/Contents/MacOS/GoogleUpdater --wake` exited 0
+[10653:90768:0602/102500.596180:VERBOSE1:chrome/updater/app/app.cc:52] Shutdown: 0
+[10653:90768:0602/102500.596546:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[10653:90768:0602/102500.596565:VERBOSE1:chrome/updater/updater.cc:390] UpdaterMain (--wake-all) returned 0.
+[10658:90789:0602/102510.348310:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[10658:90789:0602/102510.348353:VERBOSE1:chrome/updater/updater.cc:390] UpdaterMain (--crash-handler) returned 0.
+[10655:90772:0602/102510.348963:VERBOSE2:chrome/updater/event_history.cc:265] Emitted a UPDATER_PROCESS END event to the history log
+[10655:90772:0602/102510.348976:VERBOSE1:chrome/updater/updater.cc:390] UpdaterMain (--crash-handler) returned 0.
+2026-06-02 10:25:39.585 Google Chrome[10627:90245] error messaging the mach port for IMKCFRunLoopWakeUpReliable
+[10627:90289:0602/102542.129844:ERROR:google_apis/gcm/engine/registration_request.cc:291] Registration response error message: DEPRECATED_ENDPOINT
+

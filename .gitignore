@@ -1,0 +1,10 @@
+.env
+.venv/
+.topcv-session/
+.topcv-export-tui.json
+state.json
+excel-state.json
+*cookie*.json
+*cookies*.json
+__pycache__/
+*.pyc
