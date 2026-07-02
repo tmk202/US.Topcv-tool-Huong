@@ -21,11 +21,52 @@ DEFAULT_STATE_FILE = ROOT / "excel-state.json"
 EMAIL_RE = re.compile(r"[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}", re.I)
 PHONE_RE = re.compile(r"(?:\+?84|0)(?:[\s.-]?\d){8,10}")
 
+RECRUITMENT_POSITION_BY_CODE = {
+    "2109684": "TRỰC CHAT PARTTIME",
+    "2159743": "CHĂM SÓC KHÁCH HÀNG",
+    "2127038": "CHĂM SÓC KHÁCH HÀNG",
+    "2092609": "CHĂM SÓC KHÁCH HÀNG",
+    "2048612": "CHĂM SÓC KHÁCH HÀNG",
+    "2037899": "CHĂM SÓC KHÁCH HÀNG",
+    "2037802": "ECOMMERCE OPERATIONS EXECUTIVE",
+    "2033025": "ECOMMERCE OPERATIONS EXECUTIVE",
+    "2048591": "AFFILIATE BOOKING",
+    "2041278": "AFFILIATE BOOKING",
+    "2059193": "CONTENT CREATOR",
+    "2092563": "AFFILIATE MARKETING INTERN",
+    "2041347": "AFFILIATE MARKETING INTERN",
+    "2048549": "ECOMMERCE MARKETING EXECUTIVE",
+    "2037874": "ECOMMERCE MARKETING EXECUTIVE",
+    "2133932": "AI & AUTOMATION ENGINEER",
+    "2125601": "LIVESTREAM CTV",
+    "2081265": "LIVESTREAM CTV",
+    "2075973": "LIVESTREAM CTV",
+    "2082040": "BRAND MANAGER",
+    "2125839": "ECOMMERCE OPS LEAD",
+    "2050848": "TIKTOKSHOP LEADER",
+    "2076946": "CEO ASSISTANT",
+    "2068919": "GRAPHIC DESIGN",
+    "2155833": "CV TUYỂN DỤNG",
+    "2155665": "CV HCNS",
+    "2087224": "CV HCNS",
+    "2043367": "CV HCNS",
+    "2048480": "HRM",
+    "2180192": "SUPPORT LIVESTREAM",
+    "2166594": "CTV AFFILIATE MARKETING REMOTE",
+    "2161931": "DIGITAL MARKETING",
+    "2157842": "CTV CONTENT CREATOR",
+    "2081261": "EDITOR",
+    "2080137": "CTV EDITOR",
+    "2050809": "GENERAL ACCOUNTANT",
+    "1991249": "GENERAL ACCOUNTANT",
+}
+
 
 @dataclass
 class Candidate:
     job_id: str
     job_title: str
+    recruitment_position: str
     apply_at: str
     candidate_name: str
     candidate_email: str
@@ -46,6 +87,7 @@ class Candidate:
         return {
             "job_id": self.job_id,
             "job_title": self.job_title,
+            "recruitment_position": self.recruitment_position,
             "apply_at": self.apply_at,
             "candidate_name": self.candidate_name,
             "candidate_email": self.candidate_email,
@@ -128,6 +170,11 @@ def first_value(row: dict[str, str], patterns: tuple[str, ...]) -> str:
     return ""
 
 
+def recruitment_position_from_job_id(job_id: str) -> str:
+    code = digits_only(job_id)
+    return RECRUITMENT_POSITION_BY_CODE.get(code, "")
+
+
 def candidate_from_row(row: dict[str, str]) -> Optional[Candidate]:
     all_text = " ".join(row.values())
     email = first_value(row, ("email", "e mail", "thu dien tu"))
@@ -142,6 +189,7 @@ def candidate_from_row(row: dict[str, str]) -> Optional[Candidate]:
     name = first_value(row, ("ho va ten", "ho ten", "ung vien", "ten ung vien", "candidate name", "full name"))
     job_title = first_value(row, ("chien dich", "vi tri", "tin tuyen dung", "cong viec", "job title", "campaign", "ten cdtd"))
     job_id = first_value(row, ("ten cdtd", "ma tin", "ma chien dich", "ma cdtd", "job id", "campaign id", "id tin"))
+    recruitment_position = recruitment_position_from_job_id(job_id)
     apply_at = first_value(row, ("ngay ung tuyen", "ngay tiep nhan", "thoi gian ung tuyen", "apply", "applied", "created"))
     download_url = first_value(row, ("download", "tai cv", "link cv", "link xem cv", "url cv", "cv url", "resume"))
 
@@ -157,6 +205,7 @@ def candidate_from_row(row: dict[str, str]) -> Optional[Candidate]:
     return Candidate(
         job_id=job_id,
         job_title=job_title,
+        recruitment_position=recruitment_position,
         apply_at=normalize_date(apply_at),
         candidate_name=name,
         candidate_email=email,

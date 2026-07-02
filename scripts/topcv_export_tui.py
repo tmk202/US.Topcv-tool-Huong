@@ -349,7 +349,6 @@ def lark_payload_from_record(record: dict[str, str]) -> dict:
         "download_url": "",
     }
     payload.update(flat_topcv_fields(record))
-    payload["topcv_fields"] = record
     return payload
 
 
